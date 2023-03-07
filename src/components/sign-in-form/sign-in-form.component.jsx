@@ -29,7 +29,7 @@ const SignInForm = () => {
     await createUserDocumentFromAuth(user);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit= async (event) => {
     event.preventDefault();
 
     try {
@@ -81,12 +81,7 @@ const SignInForm = () => {
           name='password'
           value={password}
         />
-        <div className='buttons-container'>
-          <Button type='submit'>Sign In</Button>
-          <Button type='button' buttonType='google' onClick={signInWithGoogle}>
-            Google sign in
-          </Button>
-        </div>
+       <Button type="submit">Sign Up</Button>
       </form>
     </div>
   );
