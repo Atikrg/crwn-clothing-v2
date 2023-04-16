@@ -11,6 +11,7 @@ const Checkout = () => {
 
   return (
     <div className='checkout-container'>
+    <p>This is checkout page</p>
       <div className='checkout-header'>
         <div className='header-block'>
           <span>Product</span>
