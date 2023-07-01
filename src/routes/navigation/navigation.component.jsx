@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
-
 import { selectCurrentUser } from '../../store/user/user.selector';
+
 import { selectIsCartOpen } from '../../store/cart/cart.selector';
 
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
@@ -21,7 +21,7 @@ import {
 const Navigation = () => {
   const currentUser = useSelector(selectCurrentUser);
   const isCartOpen = useSelector(selectIsCartOpen);
-
+  console.log("hello world")
   return (
     <Fragment>
       <NavigationContainer>
@@ -40,11 +40,11 @@ const Navigation = () => {
           )}
           <CartIcon />
         </NavLinks>
-        {isCartOpen && <CartDropdown />}
+        { isCartOpen && <CartDropdown />}
       </NavigationContainer>
       <Outlet />
     </Fragment>
   );
 };
-
+  
 export default Navigation;
